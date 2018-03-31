@@ -1,4 +1,6 @@
 import '../css/global.scss'
+import { lowerCaseIt } from './helpers.js'
+import { getData } from './getData.js'
 
 "use strict"
 
@@ -10,13 +12,13 @@ let categories = 'http://jservice.io/api/categories?&count=50',
 	jeopardy;
 	
 
-let getData = url => {
-	return fetch(url)
-		.then(response => response.json())
-		.catch(error => 
-			console.error('Error:', error)
-		)
-} 
+// let getData = url => {
+// 	return fetch(url)
+// 		.then(response => response.json())
+// 		.catch(error => 
+// 			console.error('Error:', error)
+// 		)
+// } 
 
 
 //GET CATEGORIES LIST ON LOAD
@@ -33,9 +35,25 @@ getData(categories).then( data => {
 });
 
 
-function lowerCaseIt(string){
-	return string.toLowerCase()
-}
+
+
+// function capitalizeIt(string){
+// 	var wordArr = string.split(", ")
+
+// 	// console.log(wordArr)
+// 	var newArr = []
+// 	for(let a of wordArr){
+// 		// console.log(a.charAt(0).toUpperCase()+ string.slice(1))
+// 		newArr.push(a)
+// 		console.log(Array.isArray(newArr))
+// 	}
+// 	// console.log(newArr)
+// 	newArr.join(" ")
+// 	// console.log(newArr)
+// 	return newArr
+// 	// return string.charAt(0).toUpperCase() + string.slice(1)
+// }
+
 
 
 //GET LIST OF CLUES ON SELECT

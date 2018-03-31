@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports = {
@@ -84,7 +84,7 @@ module.exports = {
    }, //modules
    plugins: [
     new HtmlWebpackPlugin({
-      title: 'Webpack Starter',
+      title: 'trivia game using Jeopardy api',
       template: './src/index.html'
     }),
     new CopyWebpackPlugin([{
@@ -93,3 +93,4 @@ module.exports = {
     }])
    ] //plugins
 };
+

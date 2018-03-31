@@ -5,14 +5,17 @@ Calls in questions based on a category id
 checks answers against questions and alerts correct/incorrect
 
 To do:
-choose random cat id
+choose random cat id==
 id must be max 4 numbers
 add UI for answers
-only allow 2 tries
-if correct, value is added to score
+only allow 2 tries==
+if correct, value is added to score==
+add score to next group of answers
 have user move through questions sequentially
 next question is enabled
 bonus points if answer begins with 'what is...'
+Add more tests (using mocha & chai)
+show the answer when failed.
 
 
 ### Installation
@@ -36,4 +39,9 @@ $ npm start
 4. Run build:
 ```
 $ npm run-script build
+```
+
+5. Run tests:
+```
+$ npm run test:mocha:watch
 ```
